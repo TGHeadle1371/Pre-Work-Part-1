@@ -1,19 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML/CSS Prototype</title>
-    <link rel="stylesheet" href="CSS/stylesheet.css">
-  </head>
-  <body>
-    <div class="container">
+    <head>
+        <meta charset="utf-8" />
+        <title>HTML/CSS Prototype</title>
+        <link rel="stylesheet" href="CSS/stylesheet.css" />
+    </head>
+    <body>
+        <!-- <div class="container">
       <h1>Recreate this using HTML &amp; CSS</h1>
       <img src="https://s3.amazonaws.com/f.cl.ly/items/2z3C3Z0L2Q0R282p1V0z/Image%202014-12-19%20at%2010.07.09%20AM.png" width="303" />
-    </div>
-
-    <!-- Your code goes here -->
-
-
-
-  </body>
+    </div> -->
+        <!-- Your code goes here -->
+        <div class="container">
+          <!-- Article with H2 header for text bubble -->
+            <article>
+                <header>
+                    <h2>
+                        <p class="text-bubble">
+                            <strong>$167</strong>&nbsp;still needed for this
+                            project
+                        </p>
+                    </h2>
+                </header>
+            </article>
+            <!-- Progress bar -->
+            <div class="light-grey">
+                <div class="progress-bar"></div>
+            </div>
+            <main>
+              <!-- Paragraphs -->
+                <p>
+                    <strong style="color: #EF5F3C;"
+                        >Only 3 days left&nbsp;</strong
+                    >
+                    to fund this project.
+                </p>
+                <p>
+                    Join the<strong>&nbsp;42&nbsp;</strong>other donors who have
+                    already supported this project. Every dollar helps.
+                </p>
+                <!-- Input form and buttons -->
+                <form>
+                  <input type="text" placeholder="$50"></input>
+                  <button><strong>Give Now</strong></button>
+                </form>
+                <!-- Link -->
+                <div> <a href="#"><i>Why give $50?</i></a></div>
+            </main>
+            <br>
+            <!-- Bottom buttons -->
+            <div class="buttons">
+              <button><strong>Save for later</strong></button>
+              <button><strong>Tell your friends</strong></button>
+            </div>
+        </div>
+    </body>
 </html>

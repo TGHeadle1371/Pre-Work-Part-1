@@ -9,6 +9,7 @@ body {
 	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
 	color: #424242;
 	line-height: 1.4;
+	display: flex;
 }
 
 /* Fonts */
@@ -17,10 +18,10 @@ h1 {
 	font-size: 2.5em;
 	font-weight: bold;
 }
-
+/* Commented out max sizing to stop sizing interferance */
 .container {
 	margin: 2em auto;
-	max-width: 630px;
+	/* max-width: 630px; */
 	text-align: center;
 }
 
@@ -40,3 +41,127 @@ h1 {
 */
 
 /* Your CSS code goes here */
+/* Paragraphs */
+p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/****CREATE THE BUBBLE****/
+p.text-bubble{
+font-family: "rooney-web", "AmericanTypewriter", Rockwell, serif;
+color: white;
+position: relative; /*see the support section below for more info*/
+height: 14vh;
+width: 75vw; /*width of the speech bubble*/
+margin-bottom: 30px; /*must be at least the size the triangle we're going to create below*/
+/**add a curve to the corners**/
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 5px;
+/**Give the background a gradient**/
+background: #777;; /*required for browsers that don't support gradients*/
+}
+/* Source: http://cssdemos.tupence.co.uk/speech-bubbles.htm */
+/*****CREATE THE TRIANGLE*****/
+p.text-bubble:after {
+content: "";
+position: absolute; /*see the support section below for more info*/
+right: 50px; /*position of the triangle from the left edge of the bubble*/
+border-width: 15px 10px 0 10px; /*size of the triangle*/
+bottom: -15px; /*negative value of the top border width */
+border-style: solid;
+border-color: #777 transparent; /*same colour as the lower of the bubble's gradient*/
+margin-bottom: 5px;
+}
+/* Progress bar outer div */
+body > div > div.light-grey {
+	background-color: #eaeaea;
+	width: 75vw;
+	margin-top: -2vh;
+	border: solid 1px lightgrey;
+}
+/* Progress bar inner div */
+body > div > div > div {
+	height: 3vh;
+	width: 50vw;
+	background-color: #EF5F3C;
+}
+/* Main div size, border, and shadow */
+body > div > main {
+	border: 1px solid lightgrey;
+	box-shadow: 0px 3px lightgrey;
+	width: 75vw;
+}
+/* Main div paragraph text styling */
+body > div > main > p {
+	display: block;
+	margin: 0 8% 0 10%;
+	text-align: left;
+	padding-top: 1em;
+	font-size: 2.5vw;
+}
+/* Form sizing */
+body > div > main > form{
+	margin: 0 1.5em 0 1.5em;
+}
+/* Form input sizing */
+body > div > main > form > input {
+	height: 10vh;
+	width: 40%;
+	text-align: left;
+	padding-left: 5px;
+	font-size: 1.5em;
+	margin: 1em;
+	border-radius: 5px;
+
+}
+/* Form button sizing */
+body > div > main > form > button {
+	height: 10vh;
+	width: 40%;
+	text-align: left;
+	padding-left: 5px;
+	font-size: 1.5em;
+	margin: 1em;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #1CBC2C;
+	color: white;
+	font-family: "rooney-web", "AmericanTypewriter", Rockwell, serif;
+}
+/* Link styling */
+body > div > main > div > a {
+	display: flex;
+	margin: -2vh 7vw 4vh 7vw;
+	font-size: 3vh;
+	text-decoration: none;
+	color: #20A1D4;
+	font-family: "rooney-web", "AmericanTypewriter", Rockwell, serif;
+}
+/* body div background color and width */
+body > div > div{
+	background-color: white;
+	min-width: 636px;
+}
+/* Bottom button positioning */
+body > div > div.buttons {
+	position: flex;
+	flex-direction: row;
+}
+/* Bottom button styling */
+body > div > div.buttons > button{
+	justify-content: center;
+	float: left;
+	height: 10vh;
+	width: 40%;
+	border-radius: 5px;
+	font-size: 4vh;
+	font-family: "rooney-web", "AmericanTypewriter", Rockwell, serif;
+	background-color: #f2f1f1;
+	color: #777;
+}
+/* Bottom button spacing */
+body > div > div.buttons > button:nth-of-type(2){
+	margin-left: 15vw;
+}
